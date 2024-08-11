@@ -27,7 +27,7 @@ export class Game {
             if (this.intervalId) clearInterval(this.intervalId);
             console.log("Game Over!");
             alert("Game Over!");
-            location.reload();
+            window.location.href = "../index.html";
             return;
         }
 
