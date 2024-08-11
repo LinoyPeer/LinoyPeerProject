@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- לינק קומפיילר SASS -->
+    <link rel="stylesheet" href="../projectSASS/projectMain.css">
+    <!-- לינק קומפיילר SASS -->
+    <link rel="stylesheet" href="../projectSASS/projectMain.css">
+    <!-- לינק לספריית אייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- לינק לפונט Playwrite MX -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        img {
+            width: 6em;
+            padding-right: 40px;
+            position: absolute;
+            top: 6px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .Logoname {
+            right: 7rem;
+        }
+
+        .social {
+            direction: ltr;
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            gap: 20px;
+            left: 4rem;
+        }
+
+        .fa {
+            font-size: 30px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            padding-top: 5px;
+            position: relative;
+            z-index: 6;
+        }
+
+
+
+        nav {
+            width: 100vw;
+            line-height: 1.5;
+            position: relative;
+            z-index: 3;
+            right: 9rem;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            transform: translateX(-100px);
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            width: 160px;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            transform: translateX(0px);
+            border-radius: 10px;
+        }
+
+
+        nav ul li ul li {
+            clear: both;
+            width: max-content;
+        }
+
+        nav ul li ul li a {
+            font-size: 0.8rem;
+        }
+
+        nav ul li a {
+            width: 160px;
+            display: block;
+            text-decoration: none;
+            line-height: 3.8;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+
+        nav ul li a:hover {
+            color: black;
+            border-radius: 10px;
+            text-decoration: underline;
+            line-height: 3;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+                width: 30%;
+                text-align: center;
+                background-color: #918A87;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            nav,
+            nav ul li {
+                width: 100%;
+                clear: both;
+            }
+
+            nav {
+                /*עיצוה בלעדי לnav*/
+                border: 0px;
+                width: 30%;
+                position: absolute;
+                right: 25rem;
+                top: 1.5rem;
+
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+                position: absolute;
+                left: 9rem;
+
+            }
+
+            nav ul li a {
+                height: 40px;
+                width: 120px;
+                font-size: 13px;
+                margin-top: 5px;
+            }
+
+            .hamburger:hover+ul {
+                display: block;
+                width: 100%;
+                position: absolute;
+                left: 9rem;
+            }
+
+            .social {
+                width: 100px;
+                position: sticky;
+                top: 1.4rem;
+                right: 15rem;
+                gap: 5px;
+
+            }
+
+            .fa {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                padding: 8px;
+            }
+
+
+            .grid-container {
+                grid-template-rows: 1fr;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .txtAboutMe {
+                margin-top: 30px;
+            }
+
+            .imgAboutMe {
+                width: 50%;
+                top: 2rem;
+                left: 30vw;
+                opacity: 0.8;
+                filter: drop-shadow(10px -10px 10px #f1e6c2);
+            }
+
+            .h1CSS {
+                font-size: 34px;
+            }
+
+            p[title="aboutMeP"] {
+                width: 90vw;
+                margin-left: 5vw;
+                font-size: 17px;
+            }
+
+            .txtAboutMe p.aboutMeP {
+                font-size: 20px;
+                top: 7rem;
+                left: 50vw;
+            }
+
+            .txtAboutMe {
+                text-align: justify;
+                font-size: 10px;
+
+            }
+
+            .btn.btn-outline-warning.btnCv {
+                margin-left: 0rem;
+                margin-right: 0;
+                display: block;
+                position: sticky;
+                left: 35vw;
+                margin-top: 7vh;
+            }
+
+            .gridProjects {
+                width: 90vw;
+                display: grid;
+                gap: 15px;
+                margin: 0 auto;
+                grid-template-rows: auto;
+                grid-template-columns: 1fr;
+                margin-top: 50vh;
+            }
+
+            .projects {
+                font-size: 0.9rem;
+                text-align: justify;
+                padding: 0px;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+                border: 1px solid #000;
+            }
+
+            .imgP {
+                position: relative;
+                width: 0px;
+                height: auto;
+            }
+
+            .projects h1 {
+                font-size: 25px;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .projects p {
+                font-size: 14px;
+            }
+
+            .formFeedback {
+                height: 100vh;
+                width: 100%;
+                position: relative;
+                top: 370vh;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            form {
+                position: relative;
+                top: 0px;
+            }
+
+            .h1CSS {
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+            }
+
+            .labelArea {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0vh;
+                margin-right: 5vh;
+                gap: 0px;
+
+            }
+
+            label[for=first_name],
+            label[for=last_name],
+            label[for=email] {
+                margin-top: 0vh;
+            }
+
+            label[title="writeMe"] {
+                position: relative;
+                top: 0px;
+                left: -5vh;
+            }
+
+            label {
+                margin: 0px;
+            }
+
+            input,
+            #writeSomthing {
+                width: 60vw;
+                height: 7vh;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            label[title="writeMe"],
+            #writeSomthing,
+            .btnSentFeeddback,
+            .paragraphOfFeedbackSend {
+                position: relative;
+                top: -17vh;
+
+            }
+
+            .btnSentFeeddback {
+                position: relative;
+                top: -20vh;
+            }
+
+            #writeSomthing {
+                width: 400px;
+                height: 90px;
+                border: 2px solid #000;
+                margin-right: 0;
+                bottom: 10vh;
+                right: 6vw;
+            }
+
+            .btn[type="sent"] {
+                width: 13vw;
+                position: relative;
+                left: 0px;
+                top: 0x;
+            }
+
+            button.btnSentFeeddback {
+                margin-right: 30rem;
+                margin-top: -6rem;
+                margin-left: -15rem;
+
+            }
+
+            #btnId {
+                position: relative;
+                top: -6vh;
+                right: 0vw;
+                right: -78vw;
+                width: 120px;
+                height: 45px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>
+            <img src="../projectImages/websitelogo.png" alt="logo">
+            <p class="Logoname">Linoy Pe'er</p>
+        </span>
+        <span class="social">
+            <a href="https://www.facebook.com/linoy.peer.56" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/linoy_peer/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://github.com/" class="fa fa-github" target="_blank"></a>
+        </span>
+        <nav>
+            <div class="hamburger">&#9776;</div>
+            <ul>
+                <li><a href="#" class="currentpage">עמוד הבית</a></li>
+                <li><a href="aboutPage.html">אודות</a></li>
+                <li><a href="contactPage.html">צור קשר</a></li>
+                <li><a href="picturePage.html">גלריה</a></li>
+                <li><a href="#myProject">הפרוייקטים שלי</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

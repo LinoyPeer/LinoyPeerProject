@@ -1,0 +1,91 @@
+@media screen and (max-width: 667px) {
+    #countdown {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: inline-block;
+        transform: translate(-50%, -50%);
+        transition: 1s;
+        font-size: 0vw;
+        opacity: 50%;
+        color: rgb(1, 46, 1);
+        z-index: 3;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #f0f0f0;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+    }
+
+    canvas {
+        background-color: #fff;
+        border: 1px solid #000;
+        display: block;
+        position: relative;
+        left: 7rem;
+        top: -10rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .containerForArrowDirections {
+        gap: 3rem;
+        position: relative;
+        top: 10rem;
+        left: -10rem;
+        background-color: rgba(144, 229, 178, 0.637);
+        width: 70vw;
+        height: 40vh;
+        border-radius: 20%;
+        box-shadow: 5px 5px 5px 1px #0000003b;
+        z-index: 2;
+    }
+
+    .up,
+    .down,
+    .left,
+    .right {
+        z-index: 9;
+    }
+
+    .upAndDown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -8vh;
+        font-size: 70px;
+        width: 70vw;
+        height: 40vh;
+        gap: 5vh;
+        position: relative;
+    }
+
+    .upAndDown>p.down {
+        margin-top: -1vh;
+        position: relative;
+    }
+
+    .leftAndRight {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+        font-size: 70px;
+        position: relative;
+        top: -35vh;
+        width: 70vw;
+        height: 40vh;
+        gap: 8rem;
+    }
+
+    #app {
+        position: relative;
+    }
+}

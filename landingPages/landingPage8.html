@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Bonus- Sale Winter</title>
+    <!-- לינק לספריית הסושיאל -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- לינק לפונט "Bitter"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #8C3507;
+
+        }
+
+        p.topAsideP {
+            position: absolute;
+            top: 3vh;
+            left: 6vw;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            height: 100vh;
+
+        }
+
+        img {
+            position: relative;
+            width: 40vw;
+            height: 100vh;
+            top: -10vh;
+            margin: 0 auto;
+        }
+
+        .containerText {
+            position: relative;
+            top: 10vh;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            height: 30vh;
+        }
+
+
+        h1 {
+
+            font-size: 130px;
+            font-family: "Fahkwang", Sans-serif;
+            font-weight: lighter;
+            flex-wrap: nowrap;
+            text-align: left;
+            color: #A58473;
+            letter-spacing: normal;
+        }
+
+        p.burbelle {
+            margin-top: 7vh;
+            margin-left: 15vh;
+            font-family: "Fahkwang", Sans-serif;
+            font-weight: lighter;
+            flex-wrap: nowrap;
+            color: #A58473;
+            font-size: 1rem;
+        }
+
+        p.upTo {
+            margin-top: 3vh;
+            margin-left: 1vh;
+            font-family: "Bitter", Sans-serif;
+            font-weight: lighter;
+            flex-wrap: nowrap;
+            text-align: left;
+            color: #A58473;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        p.onFav {
+            margin-top: 3vh;
+            margin-left: 1vh;
+            font-family: "Bitter", Sans-serif;
+            font-weight: lighter;
+            flex-wrap: nowrap;
+            text-align: left;
+            color: #A58473;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        .formcontainer {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        input[value="Enter Your Email"] {
+            border: 0px;
+            border-bottom: 2px solid #000;
+            width: 11rem;
+            height: 40px;
+            margin-top: 5vh;
+            margin-left: 5vh;
+            color: #000000c1;
+        }
+
+        button {
+            width: 11rem;
+            height: 45px;
+            margin-top: 5vh;
+            background-color: #A58473;
+            color: #8C3507;
+            border: 0px;
+            font-weight: 400;
+        }
+
+
+
+        .social {
+            /*קונטיינר מדיה חברתית*/
+            direction: ltr;
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 85vh;
+            left: 6rem;
+            gap: 8px;
+        }
+
+        .fa {
+            /*עיצוב למחלקה שקיבל כל סושיאל*/
+            font-size: 15px;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            justify-content: center;
+            padding-top: 7px;
+            position: relative;
+            text-decoration: none;
+            color: #5d5a5a;
+            background-color: #e7e2df81;
+        }
+
+        .fa:hover {
+            color: #7A563C;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .divDown,
+        .divUp {
+            background-color: #00000072;
+            color: #A58473;
+            padding: 11px;
+
+        }
+
+        .divUp {
+            width: 13rem;
+            height: 40px;
+            position: absolute;
+            top: 1vh;
+            left: 85vh;
+            text-align: center;
+        }
+
+        .divDown {
+            position: relative;
+            width: 8rem;
+            height: 40px;
+            text-align: center;
+            top: -25vh;
+            left: 6vw;
+            font-size: 13px;
+        }
+
+        p.tinyText {
+            font-size: 10px;
+            position: relative;
+            top: -21.5vh;
+            left: 33vh;
+            color: #e0c9bd;
+        }
+
+
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+                align-items: center;
+                height: auto;
+                margin-top: 10vh;
+                margin: 0 auto;
+            }
+
+            img {
+                width: 100%;
+                height: 70%;
+                top: 0;
+                position: relative;
+                top: 30vh;
+
+            }
+
+            .containerText {
+                top: 0;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            h1 {
+                font-size: 60px;
+                text-align: center;
+                letter-spacing: normal;
+
+            }
+
+            p.onFav {
+                font-size: 30px;
+            }
+
+            p.upTo {
+                font-size: 34px;
+                text-align: center;
+                margin-bottom: 4px;
+            }
+
+            p.burbelle {
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                right: 10vw;
+                top: 2rem;
+            }
+
+
+            .formcontainer button {
+                width: 50%;
+                text-align: center;
+                height: 50px;
+                position: relative;
+                left: 20vw;
+
+            }
+
+            .divUp {
+                position: absolute;
+                top: 1vh;
+                left: 30vw;
+                width: 40vw;
+                height: 50px;
+                padding-top: 14px;
+            }
+
+            .divDown {
+                position: relative;
+                width: 8rem;
+                height: 40px;
+                text-align: center;
+                top: -55vh;
+                left: 35vw;
+                font-size: 13px;
+            }
+
+            p.tinyText {
+                font-size: 30px;
+                position: absolute;
+                width: 12rem;
+                height: 40px;
+                text-align: center;
+                font-size: 13px;
+                top: 70vh;
+                left: 28vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .container>(img+.containerText>(h1+hr+p+form>(input:text+button))) -->
+    <p class="burbelle">Burbelle.</p>
+    <div class="container">
+        <img src="../projectImages/modelImgLp8.png" alt="ModelImg">
+        <div class="containerText">
+            <p class="upTo">Up to</p>
+            <h1>40% OFF</h1>
+            <p class="onFav">On Favorite Styles</p>
+            <form class="formcontainer" action="">
+                <button>SHOP NOW ⟶</button>
+            </form>
+        </div>
+    </div>
+
+    <p class="tinyText">Cannot be combined with any other offers |
+        Valid online only on selected items until 26/2/2022</p>
+    <div class="divDown">Use Code: Burb22</div>
+    <div class="divUp">Winter Sale, Online Only</div>
+</body>
+
+</html>

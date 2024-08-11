@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API Project</title>
+    <!-- לינק לפונט Playwrite DE Grund -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="../../images/imageOfProject3.png">
+</head>
+
+<body>
+    <form action="">
+        <label for="cityInput">Enter City Name To Check The Weather</label><br>
+        <input type="text" placeholder="Enter city name (in English)" id="cityInput" required>
+        <button type="button" id="btn">Check Weather</button>
+    </form>
+    <div class="container">
+        <div id="nameDiv" class="gridItem"></div>
+        <div id="tempDiv" class="gridItem"></div>
+        <div id="timeDiv" class="gridItem"></div>
+        <div id="sunriseDiv" class="gridItem"></div>
+        <div id="sunsetDiv" class="gridItem"></div>
+        <div id="windDiv" class="gridItem"></div>
+        <div id="humidityDiv" class="gridItem"></div>
+        <div id="imgSrc" class="gridItem"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <!-- לינק קומפיילר SASS -->
+    <link rel="stylesheet" href="./projectSASS/projectMain.css">
+    <!-- לינק לפונט שמייצר הפרדה בדף -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet">
+    <!-- לינק לבודסטראפ כפתור -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- לינק לספריית אייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- לינק לפונט Playwrite MX -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+    <!-- logo -->
+    <link rel="icon" type="image/x-icon" href="./projectImages/websitelogo.png">
+
+
+    <style>
+        * {
+            /*איפוס התחלתי לדף*/
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            overflow-x: hidden;
+            min-height: 100%;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        img {
+            width: 6em;
+            position: absolute;
+            top: 6px;
+        }
+
+        img[title="logo"] {
+            padding-right: 40px;
+
+        }
+
+
+        .Logoname {
+            top: 0rem;
+            right: 7rem;
+        }
+
+
+        .social {
+            /*קונטיינר מדיה חברתית*/
+            direction: ltr;
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            left: 4rem;
+            gap: 20px;
+        }
+
+        .fa {
+            /*עיצוב למחלקה שקיבל כל סושיאל*/
+            font-size: 30px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            padding-top: 5px;
+            position: relative;
+            z-index: 6;
+        }
+
+
+        nav {
+            width: 100vw;
+            line-height: 1.5;
+            position: relative;
+            right: 9rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            transform: translateX(-100px);
+
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            width: 160px;
+            text-align: center;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            transform: translateX(0px);
+            border-radius: 10px;
+        }
+
+
+
+        nav ul li ul li {
+            clear: both;
+            width: max-content;
+        }
+
+        nav ul li ul li a {
+            font-size: 0.8rem;
+        }
+
+
+        nav ul li a {
+            width: 160px;
+            display: block;
+            text-decoration: none;
+            line-height: 3.8;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: black;
+            border-radius: 10px;
+            text-decoration: underline;
+            line-height: 3;
+        }
+
+        /*עיצוב לאיזור  'קצת עליי' */
+        .h1CSS {
+            /*כותרת 'קצת עליי'  */
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            top: 3rem;
+            right: -15px;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+
+        .writeMeAFeedback {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 30px;
+            font-weight: bold;
+            position: relative;
+            top: 0rem;
+            right: 0px;
+            padding-top: 0vh;
+            padding-bottom: 0vh;
+        }
+
+        .textAboutMe {
+            margin-top: -3rem;
+        }
+
+        .littleAbouttMe {
+            position: relative;
+            top: 8rem;
+        }
+
+        p {
+            /*מלל מתחת ל'קצת עליי'*/
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            line-height: 2.5;
+            direction: rtl;
+        }
+
+        .btnCv a {
+            margin-top: 2rem;
+            margin-left: 17rem;
+
+        }
+
+        .btnCv {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .grid-container {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            margin-top: 40px;
+            background-color: #fff;
+
+        }
+
+
+        .imgAboutMe {
+            position: relative;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            width: 380px;
+            opacity: 0.8;
+            filter: drop-shadow(10px -10px 10px #f1e6c2);
+        }
+
+        .txtAboutMe {
+            position: relative;
+            top: -30px;
+            text-align: justify;
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+        }
+
+        button[type="submit"] {
+            grid-column: 1/3;
+            position: relative;
+            /* משוואה 1519=4X */
+        }
+
+        .htmlCssH1 {
+            position: relative;
+            left: 35rem;
+            top: 4rem;
+            text-decoration: underline;
+        }
+
+        .gridProjects {
+            width: 80vw;
+            height: 100vh;
+            display: grid;
+            gap: 15px;
+            margin: 0 auto;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .projects {
+            height: 50vh;
+            font-size: 0.9rem;
+            text-align: justify;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+            border: 1px solid #000;
+        }
+
+        img.imgP {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            right: -1rem;
+        }
+
+
+        .projects h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+
+        p[title="project1"] {
+            position: relative;
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-top: 2vh;
+        }
+
+        .projects:hover {
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #00000072;
+        }
+
+        button[type="submit"] {
+            position: relative;
+            text-align: center;
+            font-size: 15px;
+        }
+
+
+        form {
+            height: 90vh;
+            position: relative;
+            line-height: 4;
+        }
+
+
+        .formFeedback {
+            position: relative;
+            top: 110vh;
+        }
+
+        .labelArea {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 3vh;
+            gap: 0px;
+        }
+
+        input,
+        #writeSomthing {
+            width: 20vw;
+            height: 5vh;
+        }
+
+        #writeSomthing,
+        label[title=writeMe] {
+            position: relative;
+            bottom: 6rem;
+        }
+
+        #writeSomthing {
+            height: 100px;
+        }
+
+        #btnId {
+            width: 10vw;
+            position: relative;
+            left: 0px;
+            top: -10rem;
+            margin-right: 60rem;
+        }
+
+        #copyRight {
+            font-size: 15px;
+            text-align: right;
+            position: relative;
+            top: 130vh;
+            right: 6rem;
+        }
+
+        .gridProjectsJs {
+            width: 80%;
+            position: relative;
+            right: 5rem;
+            margin-top: 50rem;
+            text-align: center;
+        }
+
+        .javaScriptH1 {
+            position: relative;
+            top: 50rem;
+            left: 35rem;
+            text-decoration: underline;
+        }
+
+        .projectsJs {
+            width: 20vw;
+            height: 20vw;
+            font-size: 0.4rem;
+            text-align: justify;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+            border: 1px solid #000;
+        }
+
+        img.imgPjs {
+            position: relative;
+            width: 150px;
+            height: 100px;
+            right: -1rem;
+            border: none;
+            border-radius: 5px;
+            margin-right: 40px;
+
+        }
+
+        .h1Js {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        p[title="project2"] {
+            position: relative;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .projectsJs:hover {
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #00000072;
+        }
+
+        button.btnJs {
+            position: relative;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        form {
+            height: 90vh;
+            position: relative;
+            line-height: 4;
+        }
+
+
+        .formFeedback {
+            position: relative;
+            top: 110vh;
+        }
+
+        .labelArea {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 3vh;
+            gap: 0px;
+        }
+
+        input,
+        #writeSomthing {
+            width: 20vw;
+            height: 5vh;
+        }
+
+        #writeSomthing,
+        label[title=writeMe] {
+            position: relative;
+            bottom: 6rem;
+        }
+
+        #writeSomthing {
+            height: 100px;
+        }
+
+        #btnId {
+            width: 10vw;
+            position: relative;
+            left: 0px;
+            top: -10rem;
+            margin-right: 60rem;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            html,
+            body {
+                width: 100vw;
+                min-height: max-content;
+            }
+
+            .Logoname {
+                font-size: 10px;
+                right: 6rem;
+                top: 1vh;
+
+            }
+
+            img {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .hamburger {
+                display: block;
+                width: 30%;
+                text-align: center;
+                background-color: #918A87;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: bold;
+                position: relative;
+                left: 7rem;
+                cursor: pointer;
+
+            }
+
+            nav ul.show {
+                display: block;
+            }
+
+            nav,
+            nav ul li {
+                width: 100%;
+                clear: both;
+                position: relative;
+                left: 7rem;
+            }
+
+            nav {
+                border: 0px;
+                width: 30%;
+                position: absolute;
+                right: 25rem;
+                top: 1.5rem;
+
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+                position: absolute;
+                left: 9rem;
+
+            }
+
+            nav ul li a {
+                height: 40px;
+                width: 120px;
+                font-size: 13px;
+                margin-top: 5px;
+                background-color: #e7e4e4;
+                border-radius: 10px;
+            }
+
+            .hamburger:hover+ul {
+                display: block;
+                width: 100%;
+            }
+
+            .social {
+                width: 100px;
+                position: relative;
+                top: 1.4rem;
+                right: 10rem;
+                gap: 5px;
+            }
+
+            .fa {
+                width: 25px;
+                height: 25px;
+                font-size: 14px;
+                padding: 6px;
+            }
+
+
+            .grid-container {
+                grid-template-rows: 1fr;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .txtAboutMe {
+                margin-top: 30px;
+            }
+
+            .imgAboutMe {
+                width: 50%;
+                top: 2rem;
+                left: 30vw;
+                opacity: 0.8;
+                filter: drop-shadow(10px -10px 10px #f1e6c2);
+            }
+
+            p[title="aboutMeP"] {
+                width: 90vw;
+                margin-left: 5vw;
+                font-size: 17px;
+            }
+
+            .txtAboutMe p.aboutMeP {
+                font-size: 20px;
+                top: 7rem;
+                left: 50vw;
+            }
+
+            .txtAboutMe {
+                text-align: justify;
+                font-size: 10px;
+
+            }
+
+            .btnCv a.btn.btn-outline-warning.viewPng,
+            .btnCv a.downloadZip {
+                position: relative;
+                width: 40vw;
+                font-size: 12px;
+                right: 10rem;
+                top: -2rem;
+            }
+
+
+            .btnCv a.downloadZip {
+                position: relative;
+                top: -3rem;
+            }
+
+            .btnCv {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .htmlCssH1 {
+                position: relative;
+                left: 4rem;
+                top: 40rem;
+                text-decoration: underline;
+            }
+
+            .gridProjects {
+                width: 90vw;
+                display: grid;
+                gap: 15px;
+                margin: 0 auto;
+                grid-template-rows: auto;
+                grid-template-columns: 1fr;
+                margin-top: 100vh;
+            }
+
+            .projects {
+                font-size: 0.9rem;
+                text-align: justify;
+                padding: 0px;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+                border: 1px solid #000;
+                height: 60vh;
+            }
+
+
+            .imgP {
+                position: relative;
+                width: 0px;
+                height: auto;
+                margin-right: 5vh;
+            }
+
+            .projects h1 {
+                font-size: 25px;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .projects p {
+                font-size: 14px;
+                margin-top: 5vh;
+            }
+
+
+            .gridProjectsJs {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .javaScriptH1 {
+                position: relative;
+                top: 220rem;
+                left: 4rem;
+                text-decoration: underline;
+            }
+
+            .btn.btn-outline-warning {
+                position: relative;
+                top: 5vh;
+            }
+
+            .projectsJs {
+                width: 60vw;
+                height: 70vw;
+                font-size: 0.4rem;
+                padding: 10px;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+                border: 1px solid #000;
+            }
+
+            img.imgPjs {
+                position: relative;
+                width: 100px;
+                height: 80px;
+                right: -1rem;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .h1Js {
+                font-size: 17px;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            p[title="project2"] {
+                position: relative;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.2;
+                margin-top: -0.5vh;
+
+            }
+
+            .gridProjects.littleAbouttMe.gridProjectsJs {
+                position: relative;
+                top: 180rem;
+                width: 100%;
+                height: 100%;
+            }
+
+            .projectsJs:hover {
+                background-color: #fff;
+                padding: 5px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 5px #00000072;
+            }
+
+            button.btnJs {
+                position: relative;
+                text-align: center;
+                font-size: 12px;
+                padding: 5px;
+                width: 120px;
+                height: 25px;
+                margin-top: -8vh;
+            }
+
+
+            .formFeedback {
+                position: relative;
+                top: 0px;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                top: 220rem;
+            }
+
+
+            .labelArea {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0vh;
+                margin-right: 5vh;
+                gap: 0px;
+            }
+
+            label[title=writeMe] {
+                position: relative;
+                left: 0vh;
+                bottom: 8rem;
+            }
+
+            label[for=first_name],
+            label[for=last_name],
+            label[for=email] {
+                margin-top: 3vh;
+            }
+
+
+            label {
+                margin: 0px;
+                font-size: 15px;
+            }
+
+            input {
+                width: 60vw;
+                height: 7vh;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            textArea#writeSomthing {
+                width: 0px;
+                width: 35vh;
+                height: 80px;
+                resize: none;
+
+            }
+
+            #writeSomthing,
+            .paragraphOfFeedbackSend {
+                position: relative;
+                top: -17vh;
+            }
+
+            .writeMeAFeedback {
+                font-size: 20px;
+            }
+
+
+            #btnId {
+                position: relative;
+                right: 0;
+                left: 0;
+                top: 5vh;
+                width: 160px;
+                height: 45px;
+                top: 0px;
+                margin-right: 0rem;
+                margin-top: -5rem;
+                margin-left: 0rem;
+            }
+
+            #copyRight {
+                top: 540vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="projectImages/websitelogo.png" title="logo" alt="logo">
+        <p class="Logoname">Linoy Pe'er</p>
+        <span class="social">
+            <a href="https://www.facebook.com/linoy.peer.56" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/linoy_peer/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://github.com/" class="fa fa-github" target="_blank"></a>
+        </span>
+        <nav>
+            <div class="hamburger">&#9776;</div>
+            <ul>
+                <li><a href="#" class="currentpage">עמוד הבית</a></li>
+                <li><a href="projectPages/aboutPage.html">אודות</a></li>
+                <li><a href="projectPages/contactPage.html">צור קשר</a></li>
+                <li><a href="projectPages/picturePage.html">גלריה</a></li>
+                <li><a href="#myProject">הפרוייקטים שלי</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1 class="h1CSS littleAbouttMe h1Css1">תיק עבודות</h1>
+        <p class="littleAbouttMe textAboutMe">שלום, ברוכים הבאים לאתר שלי <br> שמי לינוי בת 21 מטירת כרמל. אוהבת לערוך,
+            לעצב וללמוד
+            דברים
+            חדשים. <br>
+            אני מזמינה אתכם לעיין באתר שלי, להכיר אותי יותר ואת התחביבים שלי. <br> אולי תמצאו תחביב משותף ☺ <br>
+            תהנו!</p>
+        <p class="saporter littleAbouttMe">
+            &#128415;🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥🙥
+            &#128415;
+        </p>
+    </section>
+    <div class="grid-container littleAbouttMe">
+        <img class="imgAboutMe" src="projectImages/IMG_0603.JPG" alt="Picture Of Me">
+        <article class="txtAboutMe">
+            <h1 class="h1CSS">קצת עליי</h1>
+            <p title="aboutMeP">שמי לינוי בת 21 מטירת כרמל.<br>
+                מגיל מאוד צעיר אהבתי לערוך, ליצור קליפים ולחקור על מחשבים ושפות התכנות השונות. <br>
+                יחד עם הצד הטכני אני אוהבת ליצור תוכן בכל סגנון ולעצב אותו, לרקוד ולהיות בקרבת המשפחה.<br>
+                במסגרת פרויקט בניית אתר קורות חיים החלטתי ליצור את האתר בעיצוב סטנדרטי, שיתאים לתחילת הדרך שלי <br>
+                ויכלול
+                בתוכו
+                את
+                התוכן
+                המירבי על חיי.</p>
+            <div class="btnCv">
+                <a type="submit" class="btn btn-outline-warning viewPng" href="projectImages/LinoyPeerCv.pdf">להצגת
+                    קורות החיים</a>
+                <a type="submit" class="btn btn-outline-warning downloadZip" href="projectImages/LinoyPeerCv.zip"
+                    download="LinoyCv.png.zip" download>להורדת
+                    קורות החיים</a>
+            </div>
+        </article>
+    </div>
+    <h1 class="htmlCssH1">HTML + CSS Projects</h1>
+    <!-- section>.gridProjects>.projects>(img+h1{פרוייקט $}+p)*6 --> <!--מצב התחלתי של Emmet-->
+    <section class="gridProjects littleAbouttMe" id="myProject" dir="rtl">
+        <!-- grid-item project1 -->
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPageLetDesktop.png" alt="Project1" class="imgP">
+            <h1>פרוייקט 1</h1>
+            <p title="project1">'תן לנו להוביל אותך קדימה' הוא דף הנחיתה הראשון שעבדתי עליו.
+                דף זה בצבעי כחול צהבהב .</p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation1.html"><button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPagePinkDesktop.png" alt="Project2" class="imgP">
+            <h1>פרוייקט 2</h1>
+            <p title="project1">'להוביל קדימה בורוד' הוא הדף נחיתה השני שעבדתי עליו. משלב ברובו את הצבע
+                הורוד.
+            </p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation2.html"><button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPageHereDesktop.png" alt="Project3" class="imgP">
+            <h1>פרוייקט 3</h1>
+            <p title="project1">'כאן ועכשיו' הוא דף הנחיתה השלישי שעבדתי עליו.
+                דף זה משלב רקע אומברה כחול וירוק.</p>
+            <a rel="stylesheet" href=landingPages/landingPagePresentation3.html>
+                <button type="submit" class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projects">
+            <img src=" landingPages/landingPagesPictures/landingPageCoffeDesktop.png" alt="Project4" class="imgP">
+            <h1>פרוייקט 4</h1>
+            <p title="project1">''קפה טוב לבוקר טוב' דף הנחיתה הרביעי שעבדתי עליו. 
+                דף זה הדבר הראשון שחייב לשתות בבוקר.</p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation4.html"> <button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPagePhoneDesktop.png" alt="Project5" class="imgP">
+            <h1>פרוייקט 5</h1>
+            <p title="project1">'ייעוץ חינם' הוא דף הנחיתה החמישי שעבדתי עליו. 
+                דף הנחיתה שהכי אהבתי.</p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation5.html"> <button type="submit"
+                    class="btn btn-outline-warning">&#171;
+                    לעמוד הפרוייקט
+                </button></a>
+        </div>
+        <!-- grid-item project1 -->
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPagePicDesktop.png" alt="Project6" class="imgP">
+            <h1>פרוייקט 6</h1>
+            <p title="project1">'לגלות את העולם' זהו הדף נחיתה שישי שעבדתי עליו. אני אהבתי אותו מפעת התמונות.
+            </p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation6.html"> <button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPageCakeDesktop.png" alt="Project6" class="imgP">
+            <h1>פרוייקט 7</h1>
+            <p title="project1">'משהו טוב מתבשל' זהו הפרוייקט השביעי שעבדתי עליו, אהבתי אותו כי אני אוהבת לבשל.
+            </p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation7.html"> <button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPageWinterSaleDesktop.png" alt="Project6" class="imgP">
+            <h1>פרוייקט 8</h1>
+            <p title="project1">'מבצע חורף' הוא הפרוייקט השמיני שעבדתי עליו. הרעיון נלקח מטמפלט עמוד נחיתה של
+                אלמנטור.
+            </p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation8.html"> <button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <div class="projects">
+            <img src="landingPages/landingPagesPictures/landingPageBookFreeDesktop.png" alt="Project6" class="imgP">
+            <h1>פרוייקט 9</h1>
+            <p title="project1">'ספר חינם' הוא הפרוייקט השמיני שעבדתי עליו. הרעיון נלקח מטמפלט עמוד נחיתה של
+                אלמנטור. </p>
+            <a rel="stylesheet" href="landingPages/landingPagePresentation9.html"> <button type="submit"
+                    class="btn btn-outline-warning">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+    </section>
+    <!-- *************js************** -->
+    <h1 class="javaScriptH1">JavaScript Projects</h1>
+    <section class="gridProjects littleAbouttMe gridProjectsJs" id="myProject" dir="rtl">
+        <!-- grid-item project1 -->
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject1.png" alt="project1" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 1</h1>
+            <p title="project2">'רשימת הקניות שלי' <br> הוא פרוייקט שמקנה לנו את האפשרות לבצע קניות באופן מאורגן.</p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation1.html"><button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject2.png" alt="Project2" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 2</h1>
+            <p title="project2">'איקס עיגול' <br> הוא פרוייקט שמשלב משחק איקס עיגול מול המחשב וגם שני שחקנים.
+            </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation2.html"> <button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject3.png" alt="Project3" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 3</h1>
+            <p title="project2">'גלה את מזג האוויר' <br> הוא פרוייקט שמקנה לנו אפשרות לבדוק את מזג האוויר ברחבי העולם,
+                כולל פרטים נוספים.
+            </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation3.html">
+                <button type="submit" class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject4.png" alt="Project4" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 4</h1>
+            <p title="project2">'בונה מסכים' <br> הוא פרוייקט כיפי שמרחיב את היצירתיות שלנו עם בניית מרובעים בעיצובים
+                שונים.
+            </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation4.html"> <button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject5.png" Project4" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 5</h1>
+            <p title="project2">'מתכונים ונהנים'
+                <br> דף מיוחד לאוהבי הבישול, גלו את המתכונים ואת המידע שלהם
+            </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation5.html"><button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <!-- grid-item project2 -->
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject6.png" alt="Project6" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 6</h1>
+            <p title="project2">'סושיאל מדיה'
+                <br> דף מיוחד לרשתות החברתיות, אפשרות לאהוב את התמונות המועדפות
+            </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation6.html"> <button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject7.png" alt="Project6" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 7</h1>
+            <p title="project2">'משחק נחש ותפוח' <br> משחק שבוחן את זרירות הידיים שלכם במקלדת </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation7.html"> <button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject8.png" alt="Project6" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 8</h1>
+            <p title="project2">'בחנו את עצמכם'<br> הוא פרויקט לתרגול מתמטיקה, על זמן! </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation8.html"> <button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+        <div class="projectsJs">
+            <img src="./projectJs/images/imageOfProject9.png" alt="Project6" class="imgPjs">
+            <h1 class="h1Js">פרוייקט 9</h1>
+            <p title="project2">'משחק הזיכרון' <br> משחק שבוחן את יכולת הזיכרון שלכם </p>
+            </p>
+            <a rel="stylesheet" href="./projectJs/projectsPresentation/jsPresentation9.html"> <button type="submit"
+                    class="btn btn-outline-warning btnJs">&#171; לעמוד הפרוייקט </button></a>
+        </div>
+    </section>
+    <!-- ************s************** -->
+
+    <form action="" class="formFeedback">
+        <!-- כותרת לטופס -->
+        <div class="labelArea" dir="rtl">
+            <h1 class="h1CSS writeMeAFeedback">כתבו לי פידבק על האתר!</h1>
+            <!--(שדה חובה) איזור הזנת שם פרטי -->
+            <label for="first_name">שם פרטי:</label>
+            <!-- פור צריך להיות זהה לאי-ידי שאנחנו נותנים לאלמנט -->
+            <input type="text" id="first_name" required>
+            <!--(שדה חובה) איזור הזנת שם משפחה -->
+            <label for="last_name">שם משפחה:</label>
+            <input type="text" id="last_name" required>
+            <!--(שדה חובה) איזור הזנת מייל -->
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" required>
+            <br><br>
+            <!--איזור הזנת מלל חופשי, מוגבל לעד 20 מילים -->
+            <label for="text" title="writeMe">כתבו לי &#10084;</label>
+            <textarea name="feedback" id="writeSomthing" maxlength="20"></textarea>
+            <button type="submit" class="btn btn-outline-warning btnSentFeeddback" id="btnId">שלחו לי &#128516;
+            </button>
+        </div>
+        <span id="paragraphOfFeedbackSend"></span>
+    </form>
+    <footer>
+
+        <p id="copyRight">כל הזכויות שמורות ללינוי פאר &#169;</p>
+    </footer>
+    <script>
+
+        // כפתור לפידבק
+        let sendFeedback = document.querySelector('.btnSentFeeddback').addEventListener('submit', () => {
+            const newParagraph = document.getElementById('paragraphOfFeedbackSend').innerHTML = ("תודה" + " &#128512 " + "הפידבק נשלח בהצלחה" + " !");
+        })
+        // כפתור לתפריט
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('show');
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

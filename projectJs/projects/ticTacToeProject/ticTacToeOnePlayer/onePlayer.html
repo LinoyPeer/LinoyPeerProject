@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic Tac Toe One Player</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="onePlayer.css">
+    <!-- logo -->
+    <link rel="icon" type="image/x-icon" href="../images/ticTacToeLogo.png">
+
+</head>
+
+<body>
+    <!-- select player -->
+    <div class="select-box">
+        <header>Tic Tac Toc</header>
+        <div class="content">
+            <div class="title">Select icon (X OR O)</div>
+            <div class="options">
+                <button class="playerX">playerX</button>
+                <button class="playerO">playerO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player turn -->
+    <div class="play-board">
+        <div class="details">
+            <div class="players">
+                <span class="Xturn">X's turn</span>
+                <span class="Oturn">O's turn</span>
+            </div>
+        </div>
+
+        <!-- Play Erea -->
+        <div class="play-erea">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <button class="restart-button">Restart Game</button>
+    </div>
+    <div class="returnMenuArrow">
+        <p onclick="returnMenu()">Return To Manu &#8658;</p>
+    </div>
+    </div>
+
+
+
+    <script src="onePlayer.js"></script>
+
+</body>
+
+</html>

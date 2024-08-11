@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Bonus- Book Free</title>
+    <!-- פונט HEEBO מגוגל -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <!-- פונט Roboto מגוגל -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background: linear-gradient(90deg, #273E9F 68%, rgb(238, 241, 248) 68%);
+        }
+
+        .whiteBackground {
+            z-index: 3;
+            width: 27vw;
+            height: 63vh;
+            background-color: #fff;
+            position: relative;
+            top: 20vh;
+            right: -55vw;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            border-radius: 10px;
+            filter: drop-shadow(2px -2px 10px #0000006d);
+
+        }
+
+        .whiteBackground h1 {
+            color: #343434;
+            text-align: center;
+            font: normal normal normal 23px/32px Heebo;
+            font-weight: bold;
+            margin-top: 6vh;
+        }
+
+        .whiteBackground p {
+            color: rgb(158, 158, 158);
+            text-align: center;
+            font: normal normal normal 13px/22px Heebo;
+        }
+
+        .form1 {
+            width: 18vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            margin-top: -16px;
+        }
+
+        label {
+            text-align: right;
+            font-family: Heebo;
+            color: #fff;
+            font-size: 10px;
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="submit"] {
+            width: 18vw;
+            height: 5vh;
+            background-color: #F3F3F3;
+            border: 0px;
+            border-radius: 6px;
+        }
+
+        input[type="submit"] {
+            height: 5.5vh;
+            background-color: #5DD0D1;
+            color: #DCF5F5;
+            font-weight: bold;
+            font-size: 13px;
+            font-family: "Roboto Slab", serif;
+            letter-spacing: 2px;
+            margin-top: -15px;
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding-left: 1vw;
+        }
+
+
+        .sent {
+            text-align: right;
+            position: relative;
+            top: 3vh;
+        }
+
+        .leftSide {
+            font-family: "Roboto Slab", serif;
+            color: #fff;
+            font-size: 60px;
+            font-weight: lighter;
+            position: relative;
+            top: -30vh;
+            left: 20vh;
+        }
+
+        hr {
+            width: 70%;
+            margin: 0 auto;
+            color: #F3F3F3;
+        }
+
+        .logo {
+            position: relative;
+            bottom: 40rem;
+            left: 5rem;
+            width: 230px;
+            height: 50px;
+        }
+
+        .pPleaseFill p {
+            font-weight: 400;
+            color: #000;
+        }
+
+        @media(max-width:850px) {
+
+            body {
+                overflow-y: auto;
+                background: linear-gradient(180deg, #273E9F 90%, rgb(238, 241, 248) 90%);
+                overflow-x: hidden;
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            html,
+            body {
+                width: 100vw;
+                min-height: max-content;
+            }
+
+
+            .whiteBackground {
+                z-index: 3;
+                width: 70vw;
+                height: 85vh;
+                top: 45vh;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .whiteBackground h1 {
+                font: normal normal 900 25px/30px Heebo;
+                font-weight: 500;
+            }
+
+            .whiteBackground p {
+                color: #fff;
+                text-align: center;
+                font: normal normal normal 17px/25px Heebo;
+                font-weight: 200;
+
+
+            }
+
+            .h1BookFree {
+                width: 60vw;
+
+            }
+
+            .pPleaseFill p {
+                width: 55vw;
+                color: #000000;
+                font-weight: 300;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .pPleaseFill,
+            .h1BookFree {
+                margin: 0 auto;
+            }
+
+            .form1 {
+                width: 70%;
+                margin-top: 0vh;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                width: 50vw;
+                height: 7vh;
+
+            }
+
+            label {
+                font-size: 13px;
+            }
+
+            input[type="submit"] {
+                width: 50vw;
+                height: 7vh;
+                margin-bottom: 3vh;
+                margin-right: -1.5vw;
+            }
+
+            hr {
+                display: none;
+            }
+
+            .logo {
+                top: 0px;
+                position: absolute;
+                top: 5vh;
+                left: 7rem;
+            }
+
+            .leftSide {
+                font-size: 25px;
+                text-align: center;
+                font-weight: 300;
+                top: 0vh;
+                left: 0vh;
+                top: -30rem;
+                word-spacing: 2;
+                line-height: 2;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="whiteBackground">
+        <div class="h1BookFree">
+            <h1>Book Free Remote Consultation</h1>
+        </div>
+        <div class="pPleaseFill">
+            <hr>
+            <p>Please fill out the form below and we’ll get back to you to schedule free 30-min
+                initial consultation.
+            </p>
+
+        </div>
+        <div class="form1">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email Address*">
+            <input type="tel" placeholder="Add Number*">
+            <div class="sent">
+                <input type="submit" value="Get Free Consultation">
+            </div>
+        </div>
+    </div>
+    <div class="leftSide">
+        <p>Be in control of your<br>financial future with<br>our expert advice</p>
+    </div>
+    <img src="https://azdlxfxd.elementor.cloud/wp-content/uploads/2024/06/Finance_logo.png" alt="Logo" class="logo">
+
+
+
+
+
+</body>
+
+</html>

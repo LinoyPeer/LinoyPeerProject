@@ -1,0 +1,50 @@
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #783;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .menuBtn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #783;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menuBtn:hover {
+            background-color: #783;
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            .menuBtn {
+                padding: 8px 15px;
+                font-size: 14px;
+                top: 10px;
+                right: 10px;
+            }
+        }

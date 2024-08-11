@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lansing Page Pink</title>
+    <!-- פונט HEEBO מגוגל -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .pinkImg {
+            width: 100vw;
+            height: 60vh;
+            z-index: 1;
+            position: absolute;
+        }
+
+        img {
+            width: 100vw;
+            height: 60vh;
+            z-index: 2;
+        }
+
+        .blackBackground {
+            z-index: 3;
+            width: 25vw;
+            height: 63vh;
+            background-color: #1A1A1AD4;
+            position: relative;
+            top: 18vh;
+            right: -60vw;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+        }
+
+        .blackBackground h1 {
+            color: #FFF;
+            text-align: center;
+            font: normal normal normal 23px/32px Heebo;
+            font-weight: bold;
+            margin-top: 6vh;
+        }
+
+        .blackBackground p {
+            color: #FFF;
+            text-align: center;
+            font: normal normal normal 13px/22px Heebo;
+        }
+
+        .form1 {
+            width: 18vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+        }
+
+        label {
+            text-align: right;
+            font-family: Heebo;
+            color: #fff;
+            font-size: 10px;
+        }
+
+        input[type=text],
+        input[type=email] {
+            width: 18vw;
+            height: 5vh;
+            background-color: #fff;
+            border: 1px solid #D31C75;
+        }
+
+        input[type="submit"] {
+            width: 8vw;
+            height: 5.5vh;
+            background-color: #D31C75;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: Heebo;
+        }
+
+        .sent {
+            text-align: right;
+            position: relative;
+            top: 3vh;
+        }
+
+        @media(max-width:850px) {
+            .pinkImg {
+                width: 100%;
+                height: 250px;
+            }
+
+            img {
+                width: 100%;
+                height: 250px;
+                z-index: 2;
+            }
+
+            .blackBackground {
+                z-index: 3;
+                width: 70vw;
+                height: 65vh;
+                top: 15vh;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .blackBackground h1 {
+                font: normal normal 900 25px/30px Heebo;
+
+            }
+
+            .blackBackground p {
+                color: #FFF;
+                text-align: center;
+                font: normal normal normal 17px/25px Heebo;
+            }
+
+            .hp {
+                width: 40vw;
+            }
+
+            .ph {
+                width: 50vw;
+            }
+
+            .ph,
+            .hp {
+                margin: 0 auto;
+
+            }
+
+            .form1 {
+                width: 70%;
+                margin-top: -1.5vh;
+            }
+
+            input[type=text],
+            input[type=email] {
+                width: 50vw;
+                height: 4vh;
+
+            }
+
+            label {
+                font-size: 13px;
+            }
+
+            input[type="submit"] {
+                width: 20vw;
+                height: 6vh;
+                margin-top: -2vh;
+                margin-right: -1.5vw;
+            }
+
+        }
+    </style>
+</head>
+<!-- (.pinkImg>img)+(.blackBackground>h1+p+.form1>(label+input)*2+input) -->
+<div class="pinkImg">
+    <img src="../projectImages/PinkOblong.png" alt=" Pink Half Background">
+</div>
+<div class="blackBackground">
+    <div class="hp">
+        <h1>תן לנו להוביל אותך קדימה</h1>
+    </div>
+    <div class="ph">
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל <br> וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
+    </div>
+    <div class="form1">
+        <label for="">שם מלא</label>
+        <input type="text">
+        <label for="">דוא״ל</label>
+        <input type="email">
+        <div class="sent">
+            <input type="submit">
+        </div>
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>

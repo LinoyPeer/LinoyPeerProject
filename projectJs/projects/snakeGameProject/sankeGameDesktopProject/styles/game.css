@@ -1,0 +1,29 @@
+#countdown {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    font-size: 0vw;
+    opacity: 50%;
+    color: #040;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: "Arial", sans-serif;
+}
+
+canvas {
+    background-color: #fff;
+    border: 1px solid #000;
+    display: block;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

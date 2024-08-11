@@ -1,0 +1,148 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  width: 100vw;
+  height: 75px;
+  background-color: #e1dcd9;
+  direction: rtl;
+}
+
+nav ul li a {
+  color: #7a7a7a;
+  font-family: tahoma;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover ul {
+  background-color: #918a87;
+}
+
+nav ul li a:hover {
+  background-color: #918a87;
+}
+
+nav ul li ul a {
+  color: #f1e6c2;
+}
+
+.h1CSS {
+  color: #7a7a7a;
+  font-family: tahoma;
+  font-weight: 300;
+}
+
+p {
+  font-family: tahoma;
+}
+
+.btn[type=submit] {
+  text-align: center;
+  background-color: #f1e6c2;
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 400;
+}
+
+.btn[type=submit]:hover {
+  background-color: #918a87;
+  color: #fff;
+  border: 1.5px solid #fff;
+}
+
+.gridProjects {
+  background-color: #fff;
+}
+
+.projects {
+  background-color: #eeeae8;
+}
+
+.projectsJs {
+  background-color: #eeeae8;
+}
+
+button[type=submit],
+a.btnCv {
+  text-align: center;
+  background-color: #f1e6c2;
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 400;
+}
+
+button[type=submit]:hover,
+a.btnCv:hover {
+  background-color: #918a87;
+  color: #fff;
+  border: 1.5px solid #fff;
+}
+
+.formFeedback {
+  background: rgb(238, 234, 232);
+  background: linear-gradient(90deg, rgba(238, 234, 232, 0.5) 0%, rgba(145, 138, 135, 0.5) 35%, rgba(241, 230, 194, 0.5) 100%);
+}
+
+label {
+  color: #8c8683;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+input,
+#writeSomthing {
+  background-color: rgba(241, 230, 194, 0.5019607843);
+}
+
+.btn[type=sent] {
+  text-align: center;
+  background-color: #f1e6c2;
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 400;
+}
+
+.btn[type=sent]:hover {
+  background-color: #918a87;
+  color: #fff;
+  border: 1.5px solid #fff;
+}
+
+.saporter {
+  font-family: "Noto Sans Symbols 2", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fa {
+  text-decoration: none;
+  color: #6b6969;
+  background-color: #eeeae8;
+}
+
+.fa:hover {
+  color: #000;
+  background-color: #f1e6c2;
+  transition: all 0.5s ease-in-out;
+  padding: 5px;
+}
+
+p[title=aboutMeP] {
+  line-height: 3;
+}
+
+.currentpage {
+  background-color: #918a87;
+  border-radius: 10px;
+  line-height: 3;
+  color: #000;
+}
+
+.Logoname {
+  font-size: 13px;
+  font-family: "Playwrite MX", cursive;
+  position: absolute;
+  right: 6rem;
+  text-align: right;
+  top: 1.5rem;
+}/*# sourceMappingURL=projectMain.css.map */

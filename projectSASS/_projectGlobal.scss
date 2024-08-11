@@ -1,0 +1,122 @@
+// $h1Color: #7a7a7a;
+// $h2Color: #a09995;
+// $fillColor1: #eeeae8;
+// $fillColor2: #918a87;
+// $fillColor3: #f1e6c2;
+// $font: tahoma;
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    width: 100vw;
+    height: 75px;
+    background-color: $fillColor1;
+    direction: rtl;
+}
+
+
+nav ul li a {
+    color: $h1Color ;
+    font-family: $font;
+    transition: $transition;
+}
+
+nav ul li:hover ul {
+    background-color: $fillColor2;
+}
+
+nav ul li a:hover {
+    background-color: $fillColor2;
+
+
+}
+
+nav ul li ul a {
+    color: $fillColor3;
+
+}
+
+.h1CSS {
+    color: $h1Color ;
+    font-family: $font ;
+    font-weight: 300;
+}
+
+p {
+    font-family: $font;
+}
+
+
+.btn[type="submit"] {
+    text-align: center;
+    background-color: $fillColor3 ;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 400;
+}
+
+.btn[type="submit"]:hover {
+    background-color: $fillColor2 ;
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+
+.gridProjects {
+    background-color: #fff;
+}
+
+.projects {
+    background-color: $fillColor4;
+}
+
+.projectsJs {
+    background-color: $fillColor4;
+}
+
+button[type="submit"],
+a.btnCv {
+    text-align: center;
+    background-color: $fillColor3 ;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 400;
+}
+
+button[type="submit"]:hover,
+a.btnCv:hover {
+    background-color: $fillColor2 ;
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+
+.formFeedback {
+    background: rgb(238, 234, 232);
+    background: linear-gradient(90deg, rgba(238, 234, 232, 0.5) 0%, rgba(145, 138, 135, 0.5) 35%, rgba(241, 230, 194, 0.5) 100%);
+    // הקוד CSS לרקע נלקח מאתר https: //cssgradient.io/ 
+}
+
+label {
+    color: #8c8683;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input,
+#writeSomthing {
+    background-color: #f1e6c280;
+}
+
+.btn[type="sent"] {
+    text-align: center;
+    background-color: $fillColor3 ;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 400;
+}
+
+.btn[type="sent"]:hover {
+    background-color: $fillColor2 ;
+    color: #fff;
+    border: 1.5px solid #fff;
+}

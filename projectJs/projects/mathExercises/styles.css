@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.forme {
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    top: 0vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#num1,
+#num2,
+#result {
+    width: 160px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    font-family: tahoma;
+    font-weight: 300;
+    background-color: rgba(85, 68, 119, 0.104);
+    border-radius: 10%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
+    margin-bottom: 40px;
+}
+
+input[type=button] {
+    width: 140px;
+    height: 40px;
+    font-size: 15px;
+    font-family: tahoma;
+    text-align: center;
+    font-weight: 400;
+    background-color: rgba(119, 68, 95, 0.104);
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+#countdown {
+    position: absolute;
+    font-size: 40px;
+    text-align: right;
+    right: 3rem;
+    top: -16rem;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink-red {
+    color: red;
+    animation: blink 1s infinite;
+    opacity: 1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.continerStartOfExercise .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.continerStartOfExercise label {
+    color: rgba(119, 68, 95, 0.6);
+    margin-right: 10px;
+}
+
+.continerStartOfExercise input[type="text"] {
+    padding: 5px;
+    border: 1px solid rgba(119, 68, 95, 0.4);
+    border-radius: 5px;
+}
+
+.continerEndOfExercise,
+.continerStartOfExercise {
+    background-color: rgba(119, 68, 95, 0.104);
+    border: 1px solid rgba(0, 0, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.continerEndOfExercise.show,
+.continerStartOfExercise.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.continerEndOfExercise h1,
+.continerStartOfExercise h1 {
+    margin-top: 0;
+    color: rgba(119, 68, 95, 0.8);
+}
+
+.continerEndOfExercise p,
+.continerStartOfExercise p {
+    color: rgba(119, 68, 95, 0.6);
+}
+
+.continerEndOfExercise a,
+.continerStartOfExercise a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgba(119, 68, 95, 0.8);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.continerEndOfExercise a:hover,
+.continerStartOfExercise a:hover {
+    background-color: rgba(119, 68, 95, 1);
+}
+
+.continerStartOfExercise {
+    animation: startGame 1s ease forwards;
+}
+
+.continerEndOfExercise {
+    animation: startGame 1s ease forwards;
+}
+
+.continerStartOfExercise {
+    animation: startGame 1s ease forwards;
+}
+
+.forme {
+    animation: startGame 0.5s ease forwards;
+}
+
+
+@keyframes startGame {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .forme {
+        font-size: 40px;
+        width: 160px;
+        position: relative;
+        text-align: center;
+        top: 0vh;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #num1,
+    #num2,
+    #result {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        text-align: center;
+        font-family: tahoma;
+        font-weight: 300;
+        background-color: rgba(85, 68, 119, 0.104);
+        border-radius: 10%;
+        box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
+        margin-bottom: 40px;
+    }
+
+    input[type=button] {
+        width: 140px;
+        height: 40px;
+        font-size: 15px;
+        font-family: tahoma;
+        text-align: center;
+        font-weight: 400;
+        background-color: rgba(119, 68, 95, 0.104);
+        border-radius: 5%;
+        box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+        margin-bottom: 40px;
+    }
+
+    #countdown {
+        position: absolute;
+        font-size: 40px;
+        text-align: right;
+        right: 3rem;
+        top: -16rem;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .blink-red {
+        color: red;
+        animation: blink 1s infinite;
+        opacity: 1;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+
+    .continerStartOfExercise .input-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .continerStartOfExercise label {
+        color: rgba(119, 68, 95, 0.6);
+        margin-right: 10px;
+    }
+
+    .continerStartOfExercise input[type="text"] {
+        padding: 5px;
+        border: 1px solid rgba(119, 68, 95, 0.4);
+        border-radius: 5px;
+    }
+
+    .continerEndOfExercise,
+    .continerStartOfExercise {
+        background-color: rgba(119, 68, 95, 0.104);
+        border: 1px solid rgba(0, 0, 255, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .continerEndOfExercise.show,
+    .continerStartOfExercise.show {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    .continerEndOfExercise h1,
+    .continerStartOfExercise h1 {
+        margin-top: 0;
+        color: rgba(119, 68, 95, 0.8);
+    }
+
+    .continerEndOfExercise p,
+    .continerStartOfExercise p {
+        color: rgba(119, 68, 95, 0.6);
+    }
+
+    .continerEndOfExercise a,
+    .continerStartOfExercise a {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: rgba(119, 68, 95, 0.8);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .continerEndOfExercise a:hover,
+    .continerStartOfExercise a:hover {
+        background-color: rgba(119, 68, 95, 1);
+    }
+
+    .continerStartOfExercise {
+        animation: startGame 1s ease forwards;
+    }
+
+    .continerEndOfExercise {
+        animation: startGame 1s ease forwards;
+    }
+
+    .continerStartOfExercise {
+        animation: startGame 1s ease forwards;
+    }
+
+    .forme {
+        animation: startGame 0.5s ease forwards;
+    }
+}
+
+@keyframes startGame {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .continerStartOfExercise,
+    .continerEndOfExercise {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    .continerStartOfExercise h1,
+    .continerEndOfExercise h1 {
+        font-size: 24px;
+    }
+
+    #num1,
+    #num2,
+    #result {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    input[type=button] {
+        width: 100%;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    #countdown {
+        font-size: 30px;
+        right: 0rem;
+        left: 2em;
+        top: -5rem;
+    }
+}

@@ -1,0 +1,209 @@
+        #logoutButton {
+            padding: 10px 20px;
+            background-color: #a7285f95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            z-index: 3;
+            margin-left: 2rem;
+        }
+
+        .mainContainer {
+            z-index: 2;
+
+        }
+
+        #logoutButton:hover {
+            background-color: #a7285fc2;
+        }
+
+        body {
+            margin-top: 20px;
+            background: #eee;
+            font-family: tahoma;
+        }
+
+        hr {
+            width: 98%;
+            color: #000;
+            font-weight: 600;
+            position: absolute;
+            top: 5rem;
+        }
+
+        .ulClass {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+            margin-right: 3rem;
+            margin-top: 2rem;
+        }
+
+        ul li svg .path:hover {
+            color: #a7285fc2 !important;
+        }
+
+        #imgOfUser {
+            width: 15vw;
+            height: 15vh;
+            margin-left: 42vw;
+            border-radius: 50%;
+        }
+
+        .containerClass {
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .uploadPost {
+            display: flex;
+            justify-content: center;
+            gap: 15rem;
+            margin-top: 3rem;
+        }
+
+        .uploadPostParagraph {
+            display: flex;
+            justify-content: center;
+            gap: 11rem;
+            margin-top: 1.5rem;
+        }
+
+        .uploadPostParagraph p {
+            text-align: center;
+            margin: 0;
+        }
+
+        #logoutButton {
+            padding: 10px 20px;
+            background-color: #a7285f95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            z-index: 3;
+            margin-left: 2rem;
+            position: fixed;
+            right: 2rem;
+            transition: right 0.5s, left 0.5s;
+        }
+
+        #fileInput1 {
+            display: block;
+            position: relative;
+            top: 20vw;
+            left: 20vw;
+            transform: translate(-50%, -50%);
+            background-color: #d1c4e9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+        }
+
+        #publishedBtn {
+            position: relative;
+            top: -19em;
+            left: 20em;
+        }
+
+        #fileInput1 {
+            position: relative;
+            top: 10em;
+            left: 25em;
+            width: 15vw;
+            height: 5vh;
+        }
+
+        .closeBtn {
+            position: relative;
+            top: -27em;
+            left: 39em;
+        }
+
+        @media(max-width:767px) {
+
+            /* איפוס עיצוב המובייל */
+            #publishedBtn {
+                top: 0em;
+                left: 0em;
+            }
+
+            #fileInput1 {
+                top: 0em;
+                left: 0em;
+                width: auto;
+                height: auto;
+            }
+
+            .closeBtn {
+                top: 0em;
+                left: 0em;
+            }
+
+            #fileInput1 {
+                left: 5em;
+                font-size: 16px;
+                color: #333;
+                background-color: #f8d7ff7b;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            #publishedBtn {
+                top: -20rem;
+                left: 5rem;
+            }
+
+            .closeBtn {
+                top: -20em;
+                left: 8em;
+            }
+
+            hr {
+                width: 90%;
+            }
+
+            .loginWaiter h1 {
+                font-size: 15px;
+            }
+
+            #imgOfUser {
+                width: 45vw;
+                margin-left: 0;
+                margin-left: 25vw;
+                border-radius: 50%;
+            }
+
+            .ulClass {
+                margin-right: -0.2em;
+            }
+
+
+            #fileInput1.show {
+                display: block;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #d1c4e9;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                opacity: 1;
+
+            }
+
+            .closeBtn {
+                position: absolute;
+                top: 34rem;
+                right: 4rem;
+                cursor: pointer;
+                font-size: 24px;
+                color: #5f6368;
+                background: transparent;
+                border: none;
+                font-size: 25px;
+
+            }
+
+        }

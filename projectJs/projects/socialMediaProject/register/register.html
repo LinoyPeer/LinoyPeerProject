@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- logo -->
+    <link rel="icon" type="image/x-icon" href="../images/socialImg.png">
+    <!-- לינק לCSS -->
+    <link rel="stylesheet" href="register.css">
+    <title>Register Page</title>
+
+</head>
+
+<body>
+    <button style="position: fixed;" id="logoutButton" onclick="logout()">To log-in
+        page</button>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form>
+            <input type="text" id="nameInput" + 6.0 placeholder="Full Name" required />
+            <input type="text" id="userNameInput" placeholder="Username" required />
+            <input type="email" id="emailInput" placeholder="Email Address" required />
+            <input type="password" id="passwordInput" placeholder="Password" required />
+            <label for="file-upload" class="custom-file-upload" id="labelForImg">Upload Your Own Photo
+                <input id="file-upload" type="file" />
+            </label>
+            <img id="display-image" src="../../../images/profile-image.jpg" alt="Image Of User Upload" />
+            <button type="button" id="registerButton">Sign Up</button>
+        </form>
+    </div>
+
+
+    <script src="register.js"></script>
+</body>
+
+</html>

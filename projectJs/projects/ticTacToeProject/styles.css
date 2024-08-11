@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #a2b09151;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+h1,
+p,
+button {
+    margin-bottom: 3rem;
+    font-family: "Ga Maamli", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    letter-spacing: 4;
+}
+
+p {
+    margin-bottom: 3rem;
+    font-size: 20px;
+    letter-spacing: 3;
+}
+
+button {
+    margin-bottom: 3rem;
+    font-size: 15px;
+    font-weight: 300;
+    word-spacing: 3;
+    margin-left: 3rem;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #783;
+    transition: all 1s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(90, 103, 38);
+    text-align: 60px;
+    width: 120px;
+    height: 50px;
+}

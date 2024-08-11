@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Menu</title>
+    <!-- לינק לפונט IBM Plex Sans Hebrew -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: #ecebb63f;
+    }
+
+    .containerTitle {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 20vh;
+    }
+
+    .sectionTitleH1 {
+        width: 90vw;
+        height: 15vh;
+        margin: 0 auto;
+        background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+            #f1e6c2;
+        border-radius: 20px;
+        position: relative;
+        top: -1rem;
+    }
+
+    .titleH1 {
+        color: #f1e6c2;
+        font-family: IBM Plex Sans Hebrew;
+        font-size: 40px;
+        font-weight: 500;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .titleH1 {
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div class="containerTitle">
+        <section class="sectionTitleH1">
+            <h1 class="titleH1">כאן ניתן להכניס כותרת המתאימה לתפריט</h1>
+        </section>
+    </div>
+</body>
+
+</html>

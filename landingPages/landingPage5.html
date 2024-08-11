@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page Phone</title>
+    <!-- פונט Assistant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <!-- פונט Heebo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&family=Playwrite+MX:wght@100..400&display=swap"
+        rel="stylesheet">
+    <!-- לינק לסיפריית האייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .conatainerAll {
+            height: 100vw;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .containerPhone img {
+            width: 25vw;
+            height: 600px;
+            position: absolute;
+            top: 5vh;
+            right: 13vw;
+        }
+
+        .containerForm {
+            width: 50vw;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: right;
+            position: relative;
+            top: 10vh;
+            right: 32vw;
+        }
+
+        .labelAndInputContainer {
+            display: flex;
+            gap: 20px;
+            flex-direction: row-reverse;
+        }
+
+        .labelAndInput {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .containerForm h1 {
+            color: #FDBD03;
+            font-size: 45px;
+            font-weight: 900;
+            font-family: "Heebo", sans-serif;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+
+        .containerForm p {
+            color: #020253;
+            font-size: 15px;
+            font-family: "Heebo", sans-serif;
+            margin-bottom: 30px;
+
+        }
+
+        .inputText {
+            background-color: #E5EEFF;
+            border: 0px;
+            border-bottom: 4px solid #FDBD03;
+            width: 290px;
+            height: 35px;
+            margin-bottom: 30px;
+
+        }
+
+        .inputType {
+            background-color: #E5EEFF;
+            border: 0px;
+            border-bottom: 4px solid #FDBD03;
+            height: 100px;
+            width: 600px;
+            position: relative;
+            left: 10.5rem;
+        }
+
+        label {
+            color: #2C2C2C;
+            font-weight: bold;
+            font-size: 13px;
+            font-family: "Heebo", sans-serif;
+
+        }
+
+        input[type="submit"] {
+            width: 110px;
+            height: 35px;
+            background-color: #FDBD03;
+            border: 0px;
+            font-family: "Heebo", sans-serif;
+            font-weight: bold;
+            margin-top: 60px;
+            font-size: 17px;
+            color: #000;
+
+        }
+
+        hr.hrTop {
+            position: absolute;
+            height: 15px;
+            width: 380px;
+            background: #FDBD03;
+        }
+
+        hr.hrbottom {
+            position: absolute;
+            top: 98vh;
+            right: 51vw;
+            height: 15px;
+            width: 920px;
+            background: #FDBD03;
+        }
+
+        .social {
+            position: relative;
+            top: 86vh;
+            margin-left: 20px;
+
+        }
+
+        .fa {
+            color: #000;
+            font-size: 25px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 15px 10px;
+            padding: 12px;
+            background-color: #FDBD03;
+            border-radius: 50%;
+        }
+
+        .fa-whatsapp {
+            position: relative;
+            font-size: 33px;
+            right: 18vw;
+            padding: 7px;
+        }
+
+        @media(max-width:850px) {
+            .conatainerAll {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+
+            .containerPhone img {
+                width: 20%;
+                height: auto;
+                position: static;
+                margin-top: 20px;
+                margin-left: 40vw;
+            }
+
+            .containerForm {
+                width: 90%;
+                height: auto;
+                margin: 0;
+                padding: 20px;
+                position: static;
+                text-align: center;
+            }
+
+            .labelAndInputContainer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .inputText {
+                width: 100%;
+            }
+
+            .inputType {
+                width: 100%;
+                left: 0;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            hr.hrTop {
+                width: 90%;
+                position: absolute;
+                margin-left: 10px;
+            }
+
+            hr.hrbottom {
+                position: sticky;
+                top: 60rem;
+                width: 100%;
+            }
+
+            .social {
+                position: static;
+                margin-top: 100px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 2rem;
+            }
+
+            .fa-whatsapp {
+                display: none;
+            }
+
+            .fa {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatainerAll">
+        <hr class="hrTop">
+        <hr class="hrbottom">
+        <div class="containerPhone">
+            <img src="../projectImages/phoneImage.png" alt="PhoneImage">
+        </div>
+        <div class="containerForm">
+            <h1>ייעוץ חינם</h1>
+            <p>לקבלת ייעוף חינם, מוזמנים להשאיר פרטים <br> ומומחה יחזור אליכם למענה</p>
+            <div class="labelAndInputContainer">
+                <div class="labelAndInput">
+                    <label for="">שם מלא</label>
+                    <input class="inputText" type="text" name="" id="">
+                </div>
+                <div class="labelAndInput">
+                    <label for="">דוא"ל</label>
+                    <input class="inputText" type="email" name="" id="">
+                </div>
+
+            </div>
+            <div class="labelAndInput">
+                <label for="">שם מלא</label>
+                <input class="inputType" type="text" name="" id="">
+            </div>
+            <input type="submit" value="שליחה">
+        </div>
+        <a href="#" class="fa fa-whatsapp"></a>
+        <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-phone"></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

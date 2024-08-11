@@ -1,0 +1,23 @@
+// כאן יכללו כל הtitles שיקבלו המתשנים עיצובים עליהם
+// בנוסף עיצובים כללים לכל עמוד נוכחי
+
+
+p[title="aboutMeP"] {
+    line-height: 3;
+}
+
+.currentpage {
+    background-color: #918a87;
+    border-radius: 10px;
+    line-height: 3;
+    color: #000;
+}
+
+.Logoname {
+    font-size: 13px;
+    font-family: "Playwrite MX", cursive;
+    position: absolute;
+    right: 6rem;
+    text-align: right;
+    top: 1.5rem;
+}

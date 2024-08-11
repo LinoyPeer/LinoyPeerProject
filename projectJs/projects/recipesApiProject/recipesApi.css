@@ -1,0 +1,19 @@
+* {
+    direction: ltr !important;
+}
+
+img {
+    height: 35%;
+}
+
+.bi:hover {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    border: 3px orange solid;
+}
+
+html {
+    background-color: #fff;
+}

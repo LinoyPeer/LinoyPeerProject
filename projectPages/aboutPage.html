@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <!-- לינק לפונט REM -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- logo -->
+    <link rel="icon" type="image/x-icon" href="../projectImages/websitelogo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=REM:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
+        rel="stylesheet">
+    <!-- לינק קומפיילר SASS -->
+    <link rel="stylesheet" href="../projectSASS/projectMain.css">
+    <!-- לינק לספריית אייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--  IBM Plex Sans Hebrew לינק לפונט -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- לינק לפונט Playwrite MX -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+    <!-- לינק לבודסטראפ כפתור -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #ecebb63f;
+
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        img {
+            width: 6em;
+            padding-right: 40px;
+            position: absolute;
+            top: 6px;
+        }
+
+        .social {
+            direction: ltr;
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            gap: 20px;
+            left: 4rem;
+        }
+
+        .fa {
+            font-size: 30px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            padding-top: 5px;
+            position: relative;
+            z-index: 6;
+        }
+
+
+
+        nav {
+            width: 100vw;
+            line-height: 1.5;
+            position: relative;
+            z-index: 3;
+            right: 9rem;
+
+        }
+
+        .Logoname {
+            right: 7rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            transform: translateX(-100px);
+            display: inline-block;
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            width: 160px;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            transform: translateX(0px);
+            border-radius: 10px;
+        }
+
+
+        nav ul li ul li {
+            clear: both;
+            width: max-content;
+        }
+
+        nav ul li ul li a {
+            font-size: 0.8rem;
+        }
+
+        nav ul li a {
+            width: 160px;
+            display: block;
+            text-decoration: none;
+            line-height: 3.8;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+
+        nav ul li a:hover {
+            color: black;
+            border-radius: 10px;
+            text-decoration: underline;
+            line-height: 3;
+
+        }
+
+        .containerTitle {
+            width: 100vw;
+            height: 30vh;
+            position: absolute;
+            top: 20vh;
+        }
+
+        .sectionTitleH1 {
+            width: 90vw;
+            height: 15vh;
+            margin: 0 auto;
+            background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+                #f1e6c2;
+            border-radius: 20px;
+            position: relative;
+            top: -1rem;
+        }
+
+        .titleH1 {
+            color: #f1e6c2;
+            font-family: IBM Plex Sans Hebrew;
+            font-size: 40px;
+            font-weight: 500;
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .about {
+            width: 100vw;
+            height: 50vh;
+            position: absolute;
+            top: 40vh;
+            text-align: center;
+            line-height: 3.5;
+            font-family: IBM Plex Sans Hebrew;
+            direction: rtl;
+        }
+
+        button[type="submit"] {
+            /*כפתור כניסה לפרויקטים*/
+            position: relative;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #copyRight {
+            font-size: 15px;
+            text-align: right;
+            position: relative;
+            top: 75rem;
+            right: 6rem;
+        }
+
+        .ImageOfMe {
+            position: sticky;
+            font-size: 50px;
+            text-align: center;
+            border-radius: 5px;
+            top: 35rem;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            html,
+            body {
+                width: 100vw;
+                min-height: max-content;
+            }
+
+            .Logoname {
+                font-size: 10px;
+                right: 6rem;
+                top: 4vh;
+
+            }
+
+            img {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .hamburger {
+                display: block;
+                width: 30%;
+                text-align: center;
+                background-color: #918A87;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: bold;
+                position: relative;
+                left: 7rem;
+            }
+
+            nav,
+            nav ul li {
+                /*'עיצוב ה'איזור nav 
+                'וגם את חלקי ה'עמודות li 'שנמצאים בתוך ה'עמודה ul שנמצאים בתוך 'ה'איזור*/
+                width: 100%;
+                clear: both;
+                position: relative;
+                left: 7rem;
+            }
+
+            nav {
+                /*עיצוה בלעדי לnav*/
+                border: 0px;
+                width: 30%;
+                position: absolute;
+                right: 25rem;
+                top: 1.5rem;
+
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+                position: absolute;
+                left: 9rem;
+
+            }
+
+            nav ul li a {
+                height: 40px;
+                width: 120px;
+                font-size: 13px;
+                margin-top: 5px;
+                background-color: #e7e4e4;
+                border-radius: 10px;
+            }
+
+            .hamburger:hover+ul {
+                display: block;
+                width: 100%;
+            }
+
+            .social {
+                width: 100px;
+                position: relative;
+                top: 1.4rem;
+                right: 10rem;
+                gap: 5px;
+            }
+
+            .fa {
+                width: 25px;
+                height: 25px;
+                font-size: 14px;
+                padding: 6px;
+            }
+
+            div.about {
+                width: 100%;
+
+            }
+
+            .about p {
+                font-size: 13px;
+                width: 100%;
+                height: 100%;
+
+            }
+
+
+            .containerTitle {
+                width: 100vw;
+                height: 30vh;
+
+            }
+
+            .btnCv {
+                position: relative;
+                top: 25rem;
+            }
+
+
+            .ImageOfMe {
+                position: relative;
+                top: 30rem;
+                left: 1rem;
+            }
+
+            #copyRight {
+                position: relative;
+                top: 100rem;
+                right: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>
+            <img src="../projectImages/websitelogo.png" alt="logo">
+            <p class="Logoname">Linoy Pe'er</p>
+        </span>
+        <span class="social">
+            <a href="https://www.facebook.com/linoy.peer.56" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/linoy_peer/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://github.com/" class="fa fa-github" target="_blank"></a>
+        </span>
+        <nav>
+            <div class="hamburger">&#9776;</div>
+            <ul>
+                <li><a href="../index.html">עמוד הבית</a></li>
+                <li><a href="aboutPage.html" class="currentpage">אודות</a></li>
+                <li><a href="contactPage.html">צור קשר</a></li>
+                <li><a href="picturePage.html">גלריה</a></li>
+                <li><a href="../index.html#myProject">הפרוייקטים שלי</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="containerTitle">
+        <section class="sectionTitleH1">
+            <h1 class="titleH1">אודות</h1>
+        </section>
+    </div>
+    <div class="about">
+        <p>שמי לינוי בת 21 מטירת כרמל. <br>
+            אני אוהבת ללמוד, מתעניינת בעולם המחשוב והעיצוב, <br>
+            אפשר לומר שרוב התעסוקה שלי היא סביב נושאים אלו :) במסגרת לימוד בניית אתרים התבקשנו להכין אתר ולעצב אותו דרך
+            קוד,<br>
+            החלטתי להכין אתר הכולל את שפות התוכנה HTML, CSS, JavaScript בתוספות קישורים חיצוניים, עזר בBootstrap וגם
+            פונטים נחמדים :)<br>
+            ראשית התוכן כולל בתוכו בראש האתר את התפריטים הרלוונטים לאתר הראשון שלי, מכיל מידע מועט אך מספק עבור
+            ההתחלה.<br>
+            האתר מעוצב עם גווני הצבעים בז', צהוב פסטלת וחום כהה. הגוונים האלו הם האהובים עליי ויחד יוצר עיצוב יפיפה!<br>
+            לאתר הוספתי דף גלריה שדרכה ניתן להבחין שאני מתחברת לעולם הצילום :)<br>
+            אני מקווה שתאהבי את האתר שלי! <br>
+        </p>
+        <a href="../projectImages/LinoyPeerCv.pdf" class="btn btn-outline-warning btnCv">להצגת קורות
+            החיים</a>
+        <img src="../projectImages/ImageOfMe.JPG" class="ImageOfMe" alt="ImageOfMe">
+    </div>
+    <footer>
+        <p id="copyRight">כל הזכויות שמורות ללינוי פאר &#169;</p>
+    </footer>
+
+    <script>
+        // תפריט למובייל
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

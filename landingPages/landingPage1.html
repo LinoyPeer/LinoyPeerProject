@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page Let Us</title>
+    <!-- פונט Assistant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        img {
+            width: 100vw;
+            height: 70vh;
+            z-index: 1;
+        }
+
+        .text1 {
+            position: relative;
+            top: -23em;
+            text-align: center;
+        }
+
+        .form1 {
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            left: -20em;
+            gap: 30px;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        h1 {
+            color: #D3E10E;
+            font-family: Assistant;
+            font-weight: bold;
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 15px;
+            font-family: Assistant;
+        }
+
+
+
+        .name1,
+        .mail1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form1 input[type="text"],
+        .form1 input[type="email"] {
+            width: 350px;
+            height: 45px;
+            background-color: #F6F6F6;
+            border: none;
+            border-bottom: 4px solid #D3E10E;
+        }
+
+        .form1 label {
+            color: #011560;
+            text-align: right;
+            font-family: Assistant;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            width: 150px;
+            height: 40px;
+            border: none;
+            color: #011560;
+            font-family: Assistant;
+            font-weight: bold;
+            background-color: #D3E10E;
+            font-size: 20px;
+        }
+
+        @media (max-width: 850px) {
+            img {
+                width: 100vw;
+                height: 50vh;
+                z-index: 1;
+            }
+
+            .text1 {
+                margin-top: 90px;
+            }
+
+            h1 {
+                font-size: 35px;
+                margin-bottom: 15px;
+            }
+
+            .form1 {
+                flex-direction: column;
+                margin-top: -120px;
+                align-items: center;
+                position: relative;
+                left: 5vw;
+                width: 90%;
+
+            }
+
+            .name1,
+            .mail1 {
+                width: 100%;
+            }
+
+            .form1 input[type="text"],
+            .form1 input[type="email"] {
+                width: 100%;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                max-width: 360px;
+                margin-top: 15px;
+            }
+
+            body {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .container>img+h1+p+(.form1)>(label+input)*2+input -->
+    <div class="container">
+        <img src="../projectImages/BlueArrow.png" alt="Image Trangle">
+        <div class="text1">
+            <h1>תן לנו להוביל אותך קדימה</h1>
+            <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
+        </div>
+        <div class="form1">
+            <div class="name1"> <!--מחלקה לשם בלבד -->
+                <label for="">שם מלא</label>
+                <input type="text">
+            </div>
+
+            <div class="mail1"> <!--מחלקה למייל בלבד -->
+
+                <label for="">דוא״ל</label>
+                <input type="email">
+            </div>
+
+            <input type="submit" value="שליחה">
+        </div>
+    </div>
+</body>
+
+</html>

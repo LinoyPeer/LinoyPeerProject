@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: url(./images/shoppingImg.png);
+    background-size: cover;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 20px;
+}
+
+p {
+    font-family: IBM Plex Sans Hebrew;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+#textInput {
+    font-family: IBM Plex Sans Hebrew,
+        "Inter";
+    padding: 15px;
+    font-size: 20px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+#btn,
+#clearBtn {
+    font-family: IBM Plex Sans Hebrew;
+    padding: 15px 30px;
+    font-size: 21px;
+    background-color: #FFAF3C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 10%;
+    transition: all 0.7s ease-out;
+}
+
+#btn:hover,
+#clearBtn:hover {
+    background-color: rgb(150, 194, 198);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: IBM Plex Sans Hebrew;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task span {
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+    margin-left: 16px;
+    font-size: 40px;
+}
+
+.task button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task button:hover {
+    background-color: #d32f2f;
+}
+
+.fa {
+    margin-right: 3rem;
+    font-size: 20px !important;
+}
+
+.fa:hover {
+    color: #f44336;
+    transition: all 0.3s ease-in-out;
+    padding: 1px;
+}
+
+.fa {
+    margin-right: 3rem;
+    font-size: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        background: url(./images/shoppingImgMobile.png);
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 600px;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #textInput {
+        width: 80vw;
+        height: 5vh;
+        border: #000 dotted 2px;
+    }
+
+    input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+    }
+
+    span {
+        font-size: 20px;
+        padding: 2px 1px 10px;
+    }
+
+    #btn,
+    #clearBtn {
+        width: 30vw;
+        height: 5vh;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 15px;
+    }
+
+    #textInput::placeholder {
+        font-size: 12px;
+    }
+
+
+}

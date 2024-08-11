@@ -1,0 +1,238 @@
+    body {
+        background-image: url("../images/socialMediaBg.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+
+    .register-container {
+        height: 60vh;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 9px 7px 30px #00000083;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #a7285f10;
+        border: 3px solid #a7285f4a;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    label {
+        width: 7vw;
+        height: 1vh;
+        margin-left: 5rem;
+
+    }
+
+    .custom-file-upload {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #a7285f7a;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+
+    .custom-file-upload:hover {
+        background-color: #a7285f95;
+    }
+
+    button {
+        width: 80%;
+        padding: 10px;
+        background-color: #a7285f95;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+
+    button:hover {
+        background-color: #a7285fc2;
+    }
+
+    #logoutButton {
+        width: 20vw;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #a7285f95;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    #display-image {
+        width: 3vw;
+        height: 5vh;
+        border-radius: 50%;
+        margin-left: 8rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            background-image: url("../images/socialMediaBg.png");
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .register-container {
+            width: 70vw;
+            max-width: 400px;
+            height: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 9px 7px 30px #00000083;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 70%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #a7285f10;
+            border: 3px solid #a7285f4a;
+            border-radius: 5px;
+            box-sizing: border-box;
+            display: block;
+            margin-left: 6vw;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            max-width: 55vw;
+            height: 4vh;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .custom-file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #a7285f7a;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 4px;
+            font-size: 10px;
+            width: 100%;
+            margin-left: 7vw;
+            box-sizing: border-box;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #a7285f95;
+        }
+
+        button {
+            width: 40vw;
+            background-color: #a7285f95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+            margin-left: 3.5rem;
+        }
+
+
+        button:hover {
+            background-color: #a7285fc2;
+        }
+
+        #logoutButton {
+            width: auto;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #a7285f95;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        #display-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px auto;
+            display: block;
+        }
+
+        #display-image {
+            width: 15vw;
+            margin-right: 8.5rem;
+        }
+
+        @media (min-width: 600px) {
+            form {
+                width: 60vw;
+            }
+        }
+    }

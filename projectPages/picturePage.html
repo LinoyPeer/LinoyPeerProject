@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header And Title Project Together</title>
+    <!-- לינק קומפיילר SASS -->
+    <link rel="stylesheet" href="../projectSASS/projectMain.css">
+    <!-- logo -->
+    <link rel="icon" type="image/x-icon" href="../projectImages/websitelogo.png">
+    <!-- לינק לספריית אייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- לינק לפונט IBM Plex Sans Hebrew -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- לינק לפונט Playwrite MX -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ecebb63f;
+            overflow-x: hidden;
+            width: 100vw;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+
+        .hamburger {
+            display: none;
+        }
+
+        img {
+            width: 6em;
+            padding-right: 40px;
+            position: absolute;
+            top: 6px;
+        }
+
+        .Logoname {
+            right: 7rem;
+        }
+
+        .social {
+            direction: ltr;
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            gap: 20px;
+            left: 4rem;
+        }
+
+        .fa {
+            font-size: 30px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            padding-top: 5px;
+            position: relative;
+            z-index: 6;
+        }
+
+
+
+        nav {
+            width: 100vw;
+            line-height: 1.5;
+            position: relative;
+            z-index: 3;
+            right: 9rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            transform: translateX(-100px);
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            width: 160px;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            transform: translateX(0px);
+            border-radius: 10px;
+        }
+
+
+        nav ul li ul li {
+            clear: both;
+            width: max-content;
+        }
+
+        nav ul li ul li a {
+            font-size: 0.8rem;
+        }
+
+        nav ul li a {
+            width: 160px;
+            display: block;
+            text-decoration: none;
+            line-height: 3.8;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+
+        nav ul li a:hover {
+            color: black;
+            border-radius: 10px;
+            text-decoration: underline;
+            line-height: 3;
+
+        }
+
+        .containerTitle {
+            width: 100vw;
+            height: 30vh;
+            position: absolute;
+            top: 20vh;
+        }
+
+        .sectionTitleH1 {
+            width: 90vw;
+            height: 15vh;
+            margin: 0 auto;
+            background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+                #f1e6c2;
+            border-radius: 20px;
+            position: relative;
+            top: -1rem;
+            overflow: hidden;
+        }
+
+        .titleH1 {
+            color: #f1e6c2;
+            font-family: IBM Plex Sans Hebrew;
+            font-size: 40px;
+            font-weight: 500;
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .containerImagesPage {
+            width: 70vw;
+            height: 80vh;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 2px;
+            position: relative;
+            top: 40vh;
+            margin: 0 auto;
+
+            object-fit: cover;
+
+        }
+
+        .containerImagesPage .images {
+            width: 100%;
+            position: relative;
+            object-fit: cover;
+            overflow: hidden;
+            font-size: 5px;
+            border-radius: 5px;
+            margin-bottom: 50vh;
+            opacity: 0.8;
+            right: -1.5rem;
+            top: 2rem
+        }
+
+        .containerImagesPage .images:hover {
+            opacity: 1.3;
+            padding: 5px 5px 5px;
+            transition: all 1s ease-in-out;
+            border-radius: 10%;
+
+        }
+
+        img[alt="imageN7"] {
+            grid-column-end: 2;
+            grid-column-start: 2;
+            grid-row-start: 2;
+            grid-row-start: 2;
+        }
+
+        img[alt="imageN13"] {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+        }
+
+        img[alt="imageN11"] {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+        }
+
+        img[alt="imageN7"] {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            margin-top: 5rem;
+        }
+
+        img[alt="imageN5"],
+        img[alt="imageN6"],
+        img[alt="imageN11"],
+        img[alt="imageN12"],
+        img[alt="imageN13"] {
+            width: 50px;
+            height: 50vh;
+        }
+
+        img[alt="imageN5"],
+        img[alt="imageN6"],
+        img[alt="imageN9"],
+        img[alt="imageN10"],
+        img[alt="imageN12"] {
+            width: 100%;
+            height: 100%;
+        }
+
+        .center {
+            position: absolute;
+            top: 120vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+
+
+        .center .monitor-wrapper p {
+            font-family: 'VT323', monospace;
+            font-size: 100px;
+            position: relative;
+            display: inline-block;
+            animation: move 5s infinite linear;
+            color: #f1e6c2;
+            text-shadow: 0 0 3px #000, 0 0 5px #7a7a7a;
+        }
+
+        #copyRight {
+            font-size: 15px;
+            text-align: right;
+            position: absolute;
+            top: 145rem;
+            right: 6rem;
+        }
+
+        @keyframes move {
+            from {
+                left: -200px;
+
+            }
+
+            to {
+                left: 200px;
+                animation-direction: reverse;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            html,
+            body {
+                background-color: #ecebb63f;
+                overflow-x: hidden;
+                min-height: 100vh;
+            }
+
+
+            .Logoname {
+                font-size: 10px;
+                right: 6rem;
+                top: 4vh;
+
+            }
+
+            img {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .hamburger {
+                display: block;
+                width: 30%;
+                text-align: center;
+                background-color: #918A87;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: bold;
+                position: relative;
+                left: 7rem;
+            }
+
+            nav,
+            nav ul li {
+                /*'עיצוב ה'איזור nav 
+                'וגם את חלקי ה'עמודות li 'שנמצאים בתוך ה'עמודה ul שנמצאים בתוך 'ה'איזור*/
+                width: 100%;
+                clear: both;
+                position: relative;
+                left: 7rem;
+            }
+
+            nav {
+                /*עיצוה בלעדי לnav*/
+                border: 0px;
+                width: 30%;
+                position: absolute;
+                right: 25rem;
+                top: 1.5rem;
+
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+                position: absolute;
+                left: 9rem;
+
+            }
+
+            nav ul li a {
+                height: 40px;
+                width: 120px;
+                font-size: 13px;
+                margin-top: 5px;
+                background-color: #e7e4e4;
+                border-radius: 10px;
+            }
+
+            .hamburger:hover+ul {
+                display: block;
+                width: 100%;
+            }
+
+            .social {
+                width: 100px;
+                position: relative;
+                top: 1.4rem;
+                right: 10rem;
+                gap: 5px;
+            }
+
+            .fa {
+                width: 25px;
+                height: 25px;
+                font-size: 14px;
+                padding: 6px;
+            }
+
+
+
+
+            /* עיצוב רשת */
+            .grid-container {
+                grid-template-rows: 1fr;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* עיצוב גלריה ותמונות */
+            .containerImagesPage {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                gap: 0px;
+                margin: 0 auto;
+                margin-top: 15rem;
+
+            }
+
+            .containerImagesPage .images {
+                width: 100%;
+                height: auto;
+                /* Ensure images scale properly */
+                object-fit: cover;
+                border-radius: 5px;
+                opacity: 0.8;
+                transition: opacity 1s ease-in-out;
+                margin-top: -15rem;
+            }
+
+
+            .containerImagesPage .images:hover {
+                opacity: 1.3;
+                padding: 5px;
+                transition: all 1s ease-in-out;
+                border-radius: 10%;
+            }
+
+
+            h1 {
+                width: 50vw;
+            }
+
+            .center {
+                display: none;
+            }
+
+            #copyRight {
+                position: relative;
+                top: 0rem;
+                right: 6rem;
+            }
+
+            .containerTitle {
+                height: auto;
+                position: relative;
+            }
+
+            .titleH1 {
+                font-size: 30px;
+                top: 48%;
+                left: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>
+            <img src="../projectImages/websitelogo.png" alt="logo">
+            <p class="Logoname">Linoy Pe'er</p>
+        </span>
+        <span class="social">
+            <a href="https://www.facebook.com/linoy.peer.56" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/linoy_peer/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://github.com/" class="fa fa-github" target="_blank"></a>
+        </span>
+        <nav>
+            <div class="hamburger">&#9776;</div>
+            <ul>
+                <li><a href="../index.html">עמוד הבית</a></li>
+                <li><a href="aboutPage.html">אודות</a></li>
+                <li><a href="contactPage.html">צור קשר</a></li>
+                <li><a href="picturePage.html" class="currentpage">גלריה</a></li>
+                <li><a href="../index.html#myProject">הפרוייקטים שלי</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="containerTitle">
+        <section class="sectionTitleH1">
+            <h1 class="titleH1">גלריית תמונות</h1>
+        </section>
+    </div>
+    <div class="containerImagesPage">
+        <img src="../projectImages/1.jpeg" alt="imageN1" class="images">
+        <img src="../projectImages/2.jpeg" alt="imageN2" class="images">
+        <img src="../projectImages/3.jpeg" alt="imageN3" class="images">
+        <img src="../projectImages/4.jpeg" alt="imageN4" class="images">
+        <img src="../projectImages/5.jpeg" alt="imageN5" class="images">
+        <img src="../projectImages/6.jpeg" alt="imageN6" class="images">
+        <img src="../projectImages/7.jpeg" alt="imageN7" class="images">
+        <!-- <img src="../../../WordPress + Elementor/8.jpeg" alt="imageN8" class="images"> -->
+        <img src="../projectImages/9.jpeg" alt="imageN9" class="images">
+        <img src="../projectImages/10.jpeg" alt="imageN10" class="images">
+        <img src="../projectImages/11.jpeg" alt="imageN11" class="images">
+        <img src="../projectImages/12.jpeg" alt="imageN12" class="images">
+        <img src="../projectImages/13.jpeg" alt="imageN13" class="images">
+
+        <div class="center">
+            <div class="monitor-wrapper">
+                <p>Welcome</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p id="copyRight">כל הזכויות שמורות ללינוי פאר &#169;</p>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Ensure smooth scrolling
+            document.documentElement.style.scrollBehavior = 'smooth';
+        });
+
+    </script>
+</body>
+
+</html>
